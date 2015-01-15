@@ -10,12 +10,13 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- my controller -->
+    <!-- my controller and styles-->
     <script src="../controllers/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body ng-controller='mainCtrl as main'>
-    <div home></div>
-    <div repl></div>
+    <div home ng-show="!repling"></div>
+    <div repl ng-show="repling"></div>
   </body>
 </html>
 
