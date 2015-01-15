@@ -1,3 +1,6 @@
+var fs = require('fs');
+var exec = require('child_process').exec;
+
 angular.module('repl',[])
       .controller('mainCtrl', ['$scope',function mainCtrl($scope){
         //boolean, do we show the repl view?
@@ -28,9 +31,6 @@ angular.module('repl',[])
         };
 
         $scope.submit = function(){
-          var fs = require('fs');
-          var exec = require('child_process').exec;
-
           var fileName = 'scripts/myScript'+this.lang.suffix;
           var command = this.lang.command+' '+fileName;
           var input = $scope.mirror.getDoc().getValue();
@@ -42,6 +42,15 @@ angular.module('repl',[])
             });
           });
         };
+
+        $scope.gist = function(){
+          var command = 'gist -c scripts/myScript'+this.lang.suffix;
+          var child = exec(command, function(err,res){
+            $scope.output = 'RESPONSE: '+res +" (Don't worry about copying the URL, it's on your clipboard.)";
+            $scope.$apply();
+          });
+        };
+
       }])
       .directive('home',function(){
         return {

@@ -2,8 +2,9 @@
 
 A desktop REPL application build on NW.js and AngularJS currently supporting javascript, python, and R.
 
-(Disclaimer: This application is still under development.)
+Note: gist button requires the ruby gem `gist` be installed. To do this, simply execute `$ gem install gist`. To associate gists with your account run `gist --login` and complete authentication. All this assumes ruby is installed as well.
 
+(Disclaimer: This application is still under development.)
 
 #Getting Started
 

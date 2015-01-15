@@ -1,5 +1,5 @@
 {
-  "name": "test app",
+  "name": "DOSR",
   "main": "views/main.html",
   "window":{
     "toolbar": false,
