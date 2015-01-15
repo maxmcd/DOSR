@@ -1,0 +1,6 @@
+<div ng-show="!repling">
+  <h1>Languages</h1>
+  <div ng-repeat='lang in langs' ng-click='chooseLang($index)'>
+    {{$index + 1}}) {{lang.name}}
+  </div>
+</div>

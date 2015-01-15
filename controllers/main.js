@@ -37,4 +37,14 @@ angular.module('repl',[])
             });
           });
         };
-      }]);
+      }])
+      .directive('home',function(){
+        return {
+          templateUrl: 'home.html'
+        };
+      })
+      .directive('repl',function(){
+        return {
+          templateUrl: 'repl.html'
+        }
+      });

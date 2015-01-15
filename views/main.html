@@ -14,33 +14,8 @@
     <script src="../controllers/main.js"></script>
   </head>
   <body ng-controller='mainCtrl as main'>
-    <!-- Start language selector view -->
-    <div ng-show="!repling">
-      <h1>Languages</h1>
-      <div ng-repeat='lang in langs' ng-click='chooseLang($index)'>
-        {{$index + 1}}) {{lang.name}}
-      </div>
-    </div>
-    <!-- end of selector view -->
-
-    <!-- Start REPL view -->
-    <div ng-show='repling'>
-      <!-- input field -->
-      <div>
-        <!-- <textarea ng-model='input'></textarea> -->
-        <div id='input'></div>
-      </div>
-      <!-- submit and back buttons -->
-      <div id='controls'>
-        <button ng-click='submit()'>Submit</button>
-        <button ng-click='back()'>Back to Menu</button>
-      </div>
-      <!-- program output -->
-      <div>
-        {{output}}
-      </div>
-    </div>
-    <!-- end of REPL view -->
+    <div home></div>
+    <div repl></div>
   </body>
 </html>
 
