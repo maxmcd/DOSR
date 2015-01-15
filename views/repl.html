@@ -3,11 +3,11 @@
   <div id='input'></div>
   <!-- submit and back buttons -->
   <div id='controls'>
-    <button ng-click='submit()'>Submit</button>
-    <button ng-click='back()'>Back to Menu</button>
+    <div class='btn btn-success' ng-click='submit()'>Submit</div>
+    <div class='btn btn-danger' ng-click='back()'>Back</div>
   </div>
   <!-- program output -->
-  <div>
+  <div id='output'>
     {{output}}
   </div>
 </div>

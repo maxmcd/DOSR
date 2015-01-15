@@ -1,3 +1,6 @@
+.grey{
+  background-color: #eee;
+}
 img{
   margin-top: 10%;
   margin-bottom: 10%;
@@ -5,4 +8,14 @@ img{
   width: 15em;
   height: 15em;
   border-radius: 7.5em;
+}
+#input{
+  margin-bottom: 2em;
+}
+#output{
+  margin-top: 3em;
+  margin-left: 2em;
+}
+.btn{
+  margin-left: 2em;
 }

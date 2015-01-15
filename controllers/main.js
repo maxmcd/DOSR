@@ -3,7 +3,12 @@ angular.module('repl',[])
         //boolean, do we show the repl view?
         $scope.repling = false;
         //objects for supported languages
-        $scope.langs = [{name:'Javscript', suffix:'.js',command:'node',url:'../img/javascript.png'},{name:'R',suffix:'.R', command:'Rscript',url:'../img/r.png'}, {name:'Python', suffix:'.py', command:'python',url:'../img/python.png'}];
+        $scope.langs = [
+        {name:'Javscript', suffix:'.js',command:'node',url:'../img/javascript.png'},
+        {name:'R',suffix:'.R', command:'Rscript',url:'../img/r.png'},
+        {name:'Python', suffix:'.py', command:'python',url:'../img/python.png'},
+        {name:'Ruby', suffix:'.rb', command:'ruby',url:'../img/ruby.png'}
+        ];
 
         //function to select language
         $scope.chooseLang = function(arg){
@@ -32,7 +37,7 @@ angular.module('repl',[])
 
           fs.writeFile(fileName,input,function(){
             var child = exec(command,function(err,res){
-              $scope.output = 'RESPONSE: '+res+'\n'+'ERROR: '+err;
+              $scope.output = 'RESPONSE: '+res;
               $scope.$apply();
             });
           });
