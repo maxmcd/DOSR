@@ -3,6 +3,6 @@
   "main": "views/main.html",
   "window":{
     "toolbar": false,
-    "title": "REPL"
+    "title": "DOSR"
   }
 }
