@@ -1,0 +1,50 @@
+<html ng-app='repl'>
+  <head>
+    <!-- code mirror -->
+    <script src="../CodeMirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="../CodeMirror/lib/codemirror.css">
+    <script src="../CodeMirror/mode/javascript/javascript.js"></script>
+    <script src="../CodeMirror/mode/python/python.js"></script>
+    <!-- angular, bootstrap, jquery -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- my controller -->
+    <script src="../controllers/main.js"></script>
+  </head>
+  <body ng-controller='mainCtrl as main'>
+    <!-- Start language selector view -->
+    <div ng-show="!repling">
+      <h1>Languages</h1>
+      <div ng-repeat='lang in langs' ng-click='chooseLang($index)'>
+        {{$index + 1}}) {{lang.name}}
+      </div>
+    </div>
+    <!-- end of selector view -->
+
+    <!-- Start REPL view -->
+    <div ng-show='repling'>
+      <!-- input field -->
+      <div>
+        <!-- <textarea ng-model='input'></textarea> -->
+        <div id='input'></div>
+      </div>
+      <!-- submit and back buttons -->
+      <div id='controls'>
+        <button ng-click='submit()'>Submit</button>
+        <button ng-click='back()'>Back to Menu</button>
+      </div>
+      <!-- program output -->
+      <div>
+        {{output}}
+      </div>
+    </div>
+    <!-- end of REPL view -->
+  </body>
+</html>
+
+
+
+
+

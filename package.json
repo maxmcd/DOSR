@@ -1,0 +1,8 @@
+{
+  "name": "test app",
+  "main": "views/main.html",
+  "window":{
+    "toolbar": true,
+    "title": "REPL"
+  }
+}
