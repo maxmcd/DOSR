@@ -25,3 +25,8 @@ On OSX:
 On Another OS:
 
 `$ /path/to/nw .`
+
+
+#Contributing / Wishlist
+
+While the app is totally functional, the maintainer has not had the chance to implement satisficatory styling/design. Pull requests which move the project towards this goal are welcome.
