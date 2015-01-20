@@ -7,7 +7,7 @@ angular.module('repl',[])
         $scope.repling = false;
         //objects for supported languages
         $scope.langs = [
-        {name:'Javscript', suffix:'.js',command:'node',url:'../img/javascript.png'},
+        {name:'Javascript', suffix:'.js',command:'node',url:'../img/javascript.png'},
         {name:'R',suffix:'.R', command:'Rscript',url:'../img/r.png'},
         {name:'Python', suffix:'.py', command:'python',url:'../img/python.png'},
         {name:'Ruby', suffix:'.rb', command:'ruby',url:'../img/ruby.png'}
